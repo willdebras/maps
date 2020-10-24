@@ -31,13 +31,13 @@ ambient_layer = ambient_shade(water_egypt, zscale = 10, multicore = TRUE, maxsea
 ray_layer = ray_shade(water_egypt, zscale = 20, multicore = TRUE)
 
 #Plot in 3D
-# (egypt_array/255) %>%
-#   add_shadow(ray_layer,0.3) %>%
-#   add_shadow(ambient_layer,0) %>%
-#   plot_3d(water_india,zscale=130)
-# 
-# #Render snapshot with depth of field
-# render_depth(focus=0.982,focallength = 4000)
+(egypt_array/255) %>%
+  add_shadow(ray_layer,0.3) %>%
+  add_shadow(ambient_layer,0) %>%
+  plot_3d(water_egypt,zscale=130)
+
+#Render snapshot with depth of field
+render_depth(focus=0.982,focallength = 4000)
 
 #Plot in 2D
 (egypt_array/255) %>%
